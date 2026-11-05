@@ -1,0 +1,35 @@
+{
+  "name": "smart-parcel-box-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smart Parcel Box with Tamper Detection — Production Full-Stack IoT System",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "dev": "npm run dev --workspace=@smart-parcel-box/api & npm run dev --workspace=@smart-parcel-box/web",
+    "dev:api": "npm run dev --workspace=@smart-parcel-box/api",
+    "dev:web": "npm run dev --workspace=@smart-parcel-box/web",
+    "dev:simulator": "npm run simulate --workspace=@smart-parcel-box/api",
+    "lint": "npm run lint --workspaces"
+  },
+  "keywords": [
+    "iot",
+    "esp32",
+    "mqtt",
+    "react",
+    "typescript",
+    "express",
+    "mongodb",
+    "socketio"
+  ],
+  "author": "Smart Parcel Box Team",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
+
